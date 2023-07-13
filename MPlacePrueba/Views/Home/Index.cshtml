@@ -1,0 +1,54 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    var personasFemeninas = (List<PersonaViewModel>)ViewBag.PersonasFemeninas;
+}
+
+<div>
+    <span>Ejemplo ViewBag: </span>
+    @ViewBag.respuesta
+</div>
+<div class="text-center">
+    <h1 class="display-4">Tabla Mujeres</h1>
+
+    <table class="table">
+        <tr>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Genero</th>
+            <th>NumeroDocumento</th>
+        </tr>
+        @foreach (var persona in personasFemeninas)
+        {
+            <tr>
+                <td>@persona.Nombre</td>
+                <td>@persona.Apellido</td>
+                <td>@persona.Genero</td>
+                <td>@persona.NumeroDocumento</td>
+            </tr>
+        }
+    </table>
+</div>
+
+<div>
+    <span>Ejemplo ViewBag Operacion: </span>
+    @ViewBag.ResultadoOperacion
+</div>
+
+<button id="btnConsultar" type="button" class="btn btn-info">Consultar</button>
+@section scripts {
+    <script>
+            $("#btnConsultar").on("click", function (e) {
+            var url = 'http://localhost:61724/WeatherForecast/ConsultarFacturas';
+                $.ajax({
+                    type: 'GET',
+                    async: true;
+                    url: url,
+                    dataType: 'json',
+                    success: function (data) {
+                        console.log(data);
+                    }
+                });
+            });
+    </script>
+}
+
