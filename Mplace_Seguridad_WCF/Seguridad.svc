@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="Mplace_Seguridad_WCF.Seguridad" CodeBehind="Seguridad.svc.cs" %>

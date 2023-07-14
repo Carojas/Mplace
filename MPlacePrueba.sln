@@ -7,17 +7,21 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MPlacePrueba", "MPlacePrueb
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InyeccionDependencias", "InyeccionDependencias\InyeccionDependencias.csproj", "{14B5F352-34D7-4907-BA97-73342A70CA67}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MPlace_API", "MPlace_API\MPlace_API.csproj", "{AE889723-1AE2-486D-BB70-65AED331651C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MPlace_API", "MPlace_API\MPlace_API.csproj", "{AE889723-1AE2-486D-BB70-65AED331651C}"
 	ProjectSection(ProjectDependencies) = postProject
 		{E59196D6-7DFF-45CF-9E38-E3D326322490} = {E59196D6-7DFF-45CF-9E38-E3D326322490}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MPlace_Administrar", "MPlace_Administrar\MPlace_Administrar.csproj", "{EF09C339-6AFC-4F14-8A99-CF12A92A09DA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MPlace_Administrar", "MPlace_Administrar\MPlace_Administrar.csproj", "{EF09C339-6AFC-4F14-8A99-CF12A92A09DA}"
 	ProjectSection(ProjectDependencies) = postProject
 		{E59196D6-7DFF-45CF-9E38-E3D326322490} = {E59196D6-7DFF-45CF-9E38-E3D326322490}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntidadesNegocio", "EntidadesNegocio\EntidadesNegocio.csproj", "{E59196D6-7DFF-45CF-9E38-E3D326322490}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EntidadesNegocio", "EntidadesNegocio\EntidadesNegocio.csproj", "{E59196D6-7DFF-45CF-9E38-E3D326322490}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mplace_WebApp", "Mplace_WebApp\Mplace_WebApp.csproj", "{73FA765A-6F94-4BCC-9A8F-1AEA16C9499B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mplace_Seguridad_WCF", "Mplace_Seguridad_WCF\Mplace_Seguridad_WCF.csproj", "{F9338CF0-9F67-4F41-8E52-0915AC204345}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +49,14 @@ Global
 		{E59196D6-7DFF-45CF-9E38-E3D326322490}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E59196D6-7DFF-45CF-9E38-E3D326322490}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E59196D6-7DFF-45CF-9E38-E3D326322490}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73FA765A-6F94-4BCC-9A8F-1AEA16C9499B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73FA765A-6F94-4BCC-9A8F-1AEA16C9499B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73FA765A-6F94-4BCC-9A8F-1AEA16C9499B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73FA765A-6F94-4BCC-9A8F-1AEA16C9499B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9338CF0-9F67-4F41-8E52-0915AC204345}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9338CF0-9F67-4F41-8E52-0915AC204345}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9338CF0-9F67-4F41-8E52-0915AC204345}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9338CF0-9F67-4F41-8E52-0915AC204345}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
