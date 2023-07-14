@@ -18,8 +18,4 @@
     <ProjectReference Include="..\EntidadesNegocio\EntidadesNegocio.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Connected Services\" />
-  </ItemGroup>
-
 </Project>
