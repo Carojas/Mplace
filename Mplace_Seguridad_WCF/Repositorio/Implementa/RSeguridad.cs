@@ -22,8 +22,12 @@ namespace Mplace_Seguridad_WCF.Repositorio.Implementa
         {
             return new Usuario()
             {
-                Login = usuarioDto.Usuario,
+                Login = usuarioDto.Usuario.Substring(0,8),
                 Password = usuarioDto.Password,
+                Identificacion ="123",
+                IdEstado = 1,
+                IdRol = 1,
+                Nombre = $"Prueba {usuarioDto.Usuario}",
             };
         }
         private UsuarioDto MapearDataDto(Usuario usuarioDto)
