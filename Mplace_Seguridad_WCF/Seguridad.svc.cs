@@ -15,14 +15,19 @@ namespace Mplace_Seguridad_WCF
     {
         private static ILSeguridad iLSeguridad = UnityMplace.LSeguridad();
 
-        public UsuarioDto Login()
-        {
-            throw new NotImplementedException();
-        }
-
         public UsuarioDto Registrar(UsuarioDto usuarioDto)
         {
             return iLSeguridad.RegistrarUsuario(usuarioDto);
+        }
+
+        public List<RolDto> ConsultarRoles()
+        {
+            return iLSeguridad.ConsultarRoles();
+        }
+
+        public bool Login(UsuarioDto usuario)
+        {
+            return iLSeguridad.Login(usuario);
         }
     }
 
@@ -33,5 +38,17 @@ namespace Mplace_Seguridad_WCF
         public string Usuario { get; set; }
         [DataMember]
         public string Password { get; set; }
+    }
+
+    [DataContract]
+    public class RolDto
+    {
+        [DataMember]
+        public int IdRol { get; set; }
+        [DataMember]
+        public string Descripcion { get; set; }
+        [DataMember]
+        public int IdEstado { get; set; }
+      
     }
 }

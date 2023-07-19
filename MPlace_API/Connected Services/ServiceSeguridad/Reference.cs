@@ -49,16 +49,71 @@ namespace ServiceSeguridad
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="RolDto", Namespace="http://schemas.datacontract.org/2004/07/Mplace_Seguridad_WCF")]
+    public partial class RolDto : object
+    {
+        
+        private string DescripcionField;
+        
+        private int IdEstadoField;
+        
+        private int IdRolField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Descripcion
+        {
+            get
+            {
+                return this.DescripcionField;
+            }
+            set
+            {
+                this.DescripcionField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int IdEstado
+        {
+            get
+            {
+                return this.IdEstadoField;
+            }
+            set
+            {
+                this.IdEstadoField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int IdRol
+        {
+            get
+            {
+                return this.IdRolField;
+            }
+            set
+            {
+                this.IdRolField = value;
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceSeguridad.ISeguridad")]
     public interface ISeguridad
     {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISeguridad/Login", ReplyAction="http://tempuri.org/ISeguridad/LoginResponse")]
-        System.Threading.Tasks.Task<ServiceSeguridad.UsuarioDto> LoginAsync();
-        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISeguridad/Registrar", ReplyAction="http://tempuri.org/ISeguridad/RegistrarResponse")]
         System.Threading.Tasks.Task<ServiceSeguridad.UsuarioDto> RegistrarAsync(ServiceSeguridad.UsuarioDto usuarioDto);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISeguridad/ConsultarRoles", ReplyAction="http://tempuri.org/ISeguridad/ConsultarRolesResponse")]
+        System.Threading.Tasks.Task<ServiceSeguridad.RolDto[]> ConsultarRolesAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISeguridad/Login", ReplyAction="http://tempuri.org/ISeguridad/LoginResponse")]
+        System.Threading.Tasks.Task<bool> LoginAsync(ServiceSeguridad.UsuarioDto usuario);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.1.0")]
@@ -111,14 +166,19 @@ namespace ServiceSeguridad
         {
         }
         
-        public System.Threading.Tasks.Task<ServiceSeguridad.UsuarioDto> LoginAsync()
-        {
-            return base.Channel.LoginAsync();
-        }
-        
         public System.Threading.Tasks.Task<ServiceSeguridad.UsuarioDto> RegistrarAsync(ServiceSeguridad.UsuarioDto usuarioDto)
         {
             return base.Channel.RegistrarAsync(usuarioDto);
+        }
+        
+        public System.Threading.Tasks.Task<ServiceSeguridad.RolDto[]> ConsultarRolesAsync()
+        {
+            return base.Channel.ConsultarRolesAsync();
+        }
+        
+        public System.Threading.Tasks.Task<bool> LoginAsync(ServiceSeguridad.UsuarioDto usuario)
+        {
+            return base.Channel.LoginAsync(usuario);
         }
         
         public virtual System.Threading.Tasks.Task OpenAsync()

@@ -12,12 +12,15 @@ namespace Mplace_Seguridad_WCF
     [ServiceContract]
     public interface ISeguridad
     {
-        [OperationContract]
-        UsuarioDto Login();
 
         [OperationContract]
         UsuarioDto Registrar(UsuarioDto usuarioDto);
 
+        [OperationContract]
+        List<RolDto> ConsultarRoles();
+
+        [OperationContract]
+        bool Login(UsuarioDto usuario);
         // TODO: Add your service operations here
     }
 

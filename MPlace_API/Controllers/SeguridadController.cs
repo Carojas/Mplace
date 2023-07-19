@@ -32,5 +32,18 @@ namespace MPlace_API.Controllers
             var result = await _usuarioServicio.RegistrarUsuario(user);
             return Ok(result);
         }
+
+        [HttpGet("ConsultarRoles")]
+        public async Task<List<RolDto>> ConsultarRoles()
+        {
+            return await _usuarioServicio.ConsultarRoles();
+        }
+
+        [HttpPost("Login")]
+        public async Task<bool> Login([FromBody] UsuarioDto user)
+        {
+            return await _usuarioServicio.Login(user);
+        }
+
     }
 }

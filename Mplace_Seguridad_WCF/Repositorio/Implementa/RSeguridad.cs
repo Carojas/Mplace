@@ -38,5 +38,21 @@ namespace Mplace_Seguridad_WCF.Repositorio.Implementa
                 Password = usuarioDto.Password,
             };
         }
+
+        public List<RolDto> ConsultarRoles()
+        {
+            using (var db = new MPlaceEntities())
+            {
+                return db.Rol.Select(s=>new RolDto() {IdRol =  s.IdRol, Descripcion = s.Descripcion, IdEstado = s.IdEstado}).ToList();
+            }
+        }
+
+        public bool Login(UsuarioDto usuario)
+        {
+            using (var db = new MPlaceEntities())
+            {
+                return db.Usuario.Any(a => a.Login == usuario.Usuario && a.Password == usuario.Password);
+            }
+        }
     }
 }

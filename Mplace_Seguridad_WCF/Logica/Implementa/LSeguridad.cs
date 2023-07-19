@@ -13,5 +13,14 @@ namespace Mplace_Seguridad_WCF.Logica.Implementa
         {
             return RSeguridad.RegistrarUsuario(usuarioDto);
         }
+        public List<RolDto> ConsultarRoles() 
+        {
+            return RSeguridad.ConsultarRoles();
+        }
+
+        public bool Login(UsuarioDto usuario)
+        {
+            return RSeguridad.Login(usuario);
+        }
     }
 }
